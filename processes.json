@@ -1,0 +1,1724 @@
+{
+    "annotations": {
+      "list": [
+        {
+          "builtIn": 1,
+          "datasource": {
+            "type": "grafana",
+            "uid": "-- Grafana --"
+          },
+          "enable": true,
+          "hide": true,
+          "iconColor": "rgba(0, 211, 255, 1)",
+          "name": "Annotations & Alerts",
+          "type": "dashboard"
+        }
+      ]
+    },
+    "editable": true,
+    "fiscalYearStartMonth": 0,
+    "graphTooltip": 0,
+    "id": 9,
+    "links": [],
+    "panels": [
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 0
+        },
+        "id": 8,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "",
+          "mode": "markdown"
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "dataset": "HealthDB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "builder",
+            "format": "table",
+            "rawSql": "",
+            "refId": "A"
+          }
+        ],
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "gridPos": {
+          "h": 2,
+          "w": 3,
+          "x": 0,
+          "y": 1
+        },
+        "id": 7,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<img src=\"https://tangentsolutions.co.za/wp-content/uploads/2021/09/Tangent-Logo-White-and-Green.svg\" alt=\"Tangent Solutions Logo\" />\n",
+          "mode": "html"
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "dataset": "HealthDB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "builder",
+            "format": "table",
+            "rawSql": "",
+            "refId": "A"
+          }
+        ],
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 2,
+          "w": 2,
+          "x": 18,
+          "y": 1
+        },
+        "id": 15,
+        "options": {
+          "SVGBaseFix": true,
+          "add100Percentage": true,
+          "calcsMutation": "standard",
+          "centerAlignContent": true,
+          "codeData": "{\n  \"text\": \"Random text\"\n}",
+          "css": "",
+          "dynamicData": false,
+          "dynamicFieldDisplayValues": false,
+          "dynamicHtmlGraphics": false,
+          "dynamicProps": false,
+          "html": "<a href=\"http://100.110.194.71:3000/d/edy66sb0i2cxsc/one-pager?orgId=1&from=1726642665220&to=1726644465220\" style=\"text-decoration: none; color: inherit;\">\n  <div style=\"text-align: center;\">\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 576 512\" width=\"30\" height=\"30\">\n      <path fill=\"#FFFFFF\" d=\"M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z\"/>\n    </svg>\n    <p style=\"margin-top: 2px; font-size: 10px; color: white;\">Home</p>\n  </div>\n</a>\n",
+          "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+          "onInitOnResize": false,
+          "onRender": "// Sets the value from the first series on every refresh\nconst htmlgraphicsValue = htmlNode.getElementById('htmlgraphics-value');\n\nif (htmlgraphicsValue) {\n  const valueField = data.series[0]?.fields[1];\n  if (valueField) {\n    const length = valueField.values.length;\n    htmlgraphicsValue.textContent = valueField.values.get(length - 1);\n  } else {\n    htmlgraphicsValue.textContent = \"No data\"\n  }\n}\n",
+          "overflow": "visible",
+          "panelupdateOnMount": true,
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull",
+              "last",
+              "firstNotNull",
+              "first",
+              "min",
+              "max",
+              "mean",
+              "median",
+              "sum",
+              "count",
+              "range",
+              "delta",
+              "step",
+              "diff",
+              "logmin",
+              "allIsZero",
+              "allIsNull",
+              "diffperc"
+            ]
+          },
+          "renderOnMount": true,
+          "rootCSS": "",
+          "useGrafanaScrollbar": true
+        },
+        "targets": [
+          {
+            "dataset": "aspenhealthcare_DB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "builder",
+            "format": "table",
+            "rawSql": "",
+            "refId": "A"
+          }
+        ],
+        "transparent": true,
+        "type": "gapit-htmlgraphics-panel"
+      },
+      {
+        "datasource": {
+          "default": true,
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 2,
+          "w": 2,
+          "x": 20,
+          "y": 1
+        },
+        "id": 16,
+        "options": {
+          "SVGBaseFix": true,
+          "add100Percentage": true,
+          "calcsMutation": "standard",
+          "centerAlignContent": true,
+          "codeData": "{\n  \"text\": \"Random text\"\n}",
+          "css": "",
+          "dynamicData": false,
+          "dynamicFieldDisplayValues": false,
+          "dynamicHtmlGraphics": false,
+          "dynamicProps": false,
+          "html": "<a href=\"http://100.110.194.71:3000/d/edxk3zs5sr7r4c/queues?orgId=1&from=1726630329498&to=1726651929498\" style=\"text-decoration: none; color: inherit;\">\r\n  <div style=\"text-align: center;\">\r\n    <svg xmlns=\"http://www.w3.org/2000/svg\" viewBox=\"0 0 512 512\" width=\"30\" height=\"30\">\r\n      <path fill=\"#FFFFFF\" d=\"M418.4 157.9c35.3-8.3 61.6-40 61.6-77.9c0-44.2-35.8-80-80-80c-43.4 0-78.7 34.5-80 77.5L136.2 151.1C121.7 136.8 101.9 128 80 128c-44.2 0-80 35.8-80 80s35.8 80 80 80c12.2 0 23.8-2.7 34.1-7.6L259.7 407.8c-2.4 7.6-3.7 15.8-3.7 24.2c0 44.2 35.8 80 80 80s80-35.8 80-80c0-27.7-14-52.1-35.4-66.4l37.8-207.7zM156.3 232.2c2.2-6.9 3.5-14.2 3.7-21.7l183.8-73.5c3.6 3.5 7.4 6.7 11.6 9.5L317.6 354.1c-5.5 1.3-10.8 3.1-15.8 5.5L156.3 232.2z\"/>\r\n    </svg>\r\n    <p style=\"margin-top: 2px; font-size: 10px; color: white;\">Queues</p>\r\n  </div>\r\n</a>\r\n",
+          "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+          "onInitOnResize": false,
+          "onRender": "// Sets the value from the first series on every refresh\nconst htmlgraphicsValue = htmlNode.getElementById('htmlgraphics-value');\n\nif (htmlgraphicsValue) {\n  const valueField = data.series[0]?.fields[1];\n  if (valueField) {\n    const length = valueField.values.length;\n    htmlgraphicsValue.textContent = valueField.values.get(length - 1);\n  } else {\n    htmlgraphicsValue.textContent = \"No data\"\n  }\n}\n",
+          "overflow": "visible",
+          "panelupdateOnMount": true,
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull",
+              "last",
+              "firstNotNull",
+              "first",
+              "min",
+              "max",
+              "mean",
+              "median",
+              "sum",
+              "count",
+              "range",
+              "delta",
+              "step",
+              "diff",
+              "logmin",
+              "allIsZero",
+              "allIsNull",
+              "diffperc"
+            ]
+          },
+          "renderOnMount": true,
+          "rootCSS": "",
+          "useGrafanaScrollbar": true
+        },
+        "targets": [
+          {
+            "dataset": "aspenhealthcare_DB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "builder",
+            "format": "table",
+            "rawSql": "",
+            "refId": "A"
+          }
+        ],
+        "transparent": true,
+        "type": "gapit-htmlgraphics-panel"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 3
+        },
+        "id": 13,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<hr style=\"border: 1px solid #FFFFFF; margin: 0px 0;\">\r\n",
+          "mode": "markdown"
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "dataset": "HealthDB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "builder",
+            "format": "table",
+            "rawSql": "",
+            "refId": "A"
+          }
+        ],
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "datasource": {
+          "default": true,
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 2,
+          "w": 24,
+          "x": 0,
+          "y": 4
+        },
+        "id": 17,
+        "options": {
+          "SVGBaseFix": true,
+          "add100Percentage": true,
+          "calcsMutation": "standard",
+          "centerAlignContent": true,
+          "codeData": "{\n  \"text\": \"Random text\"\n}",
+          "css": "/* === BASE HEADING === */ \r\n\r\nh1 {\r\n  position: relative;\r\n  padding: 0;\r\n  margin: 0;\r\n  font-family: \"Raleway\", sans-serif;\r\n  font-weight: 300;\r\n  font-size: 40px;\r\n  color: #ffffff;\r\n  -webkit-transition: all 0.4s ease 0s;\r\n  -o-transition: all 0.4s ease 0s;\r\n  transition: all 0.4s ease 0s;\r\n}\r\n\r\nh1 span {\r\n  display: block;\r\n  font-size: 0.5em;\r\n  line-height: 1.3;\r\n}\r\nh1 em {\r\n  font-style: normal;\r\n  font-weight: 600;\r\n}\r\n\r\n\r\n/* Style 7\r\n   ----------------------------- */\r\n.seven h1 {\r\ntext-align: center;\r\n    font-size:30px; font-weight:300; color:rgb(255, 255, 255); letter-spacing:1px;\r\n    text-transform: uppercase;\r\n\r\n    display: grid;\r\n    grid-template-columns: 1fr max-content 1fr;\r\n    grid-template-rows: 27px 0;\r\n    grid-gap: 20px;\r\n    align-items: center;\r\n}\r\n\r\n.seven h1:after,.seven h1:before {\r\n    content: \" \";\r\n    display: block;\r\n    border-bottom: 1px solid #00c597;\r\n    border-top: 1px solid #00c5b1;\r\n    height: 5px;\r\n  background-color:#f8f8f8;\r\n}",
+          "dynamicData": false,
+          "dynamicFieldDisplayValues": false,
+          "dynamicHtmlGraphics": false,
+          "dynamicProps": false,
+          "html": "<div class=\"seven\">\r\n  <h1>Processes Information</h1>\r\n</div>",
+          "onInit": "// Sets the text from customProperties\nconst htmlgraphicsText = htmlNode.getElementById('htmlgraphics-text');\n\nif (htmlgraphicsText) {\n  htmlgraphicsText.textContent = customProperties.text;\n\n  // Change the text color based on the theme\n  if (theme.isDark) {\n    htmlgraphicsText.style.color = 'green';\n  } else {\n    htmlgraphicsText.style.color = 'red';\n  }\n}\n",
+          "onInitOnResize": false,
+          "onRender": "// Sets the value from the first series on every refresh\nconst htmlgraphicsValue = htmlNode.getElementById('htmlgraphics-value');\n\nif (htmlgraphicsValue) {\n  const valueField = data.series[0]?.fields[1];\n  if (valueField) {\n    const length = valueField.values.length;\n    htmlgraphicsValue.textContent = valueField.values.get(length - 1);\n  } else {\n    htmlgraphicsValue.textContent = \"No data\"\n  }\n}\n",
+          "overflow": "visible",
+          "panelupdateOnMount": true,
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull",
+              "last",
+              "firstNotNull",
+              "first",
+              "min",
+              "max",
+              "mean",
+              "median",
+              "sum",
+              "count",
+              "range",
+              "delta",
+              "step",
+              "diff",
+              "logmin",
+              "allIsZero",
+              "allIsNull",
+              "diffperc"
+            ]
+          },
+          "renderOnMount": true,
+          "rootCSS": "",
+          "useGrafanaScrollbar": true
+        },
+        "targets": [
+          {
+            "dataset": "aspenhealthcare_DB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "builder",
+            "format": "table",
+            "rawSql": "",
+            "refId": "A"
+          }
+        ],
+        "transparent": true,
+        "type": "gapit-htmlgraphics-panel"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "description": "Allows you to see the number of jobs currently being executed, awaiting execution, or being stopped so you can assess the efficiency of your system. As a job is either started or stopped, the chart gets updated accordingly. If the long-running workflows functionality is enabled, the widget also displays metrics on suspended and resumed jobs.",
+        "fieldConfig": {
+          "defaults": {
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 7,
+          "x": 0,
+          "y": 6
+        },
+        "id": 1,
+        "options": {
+          "colorMode": "none",
+          "graphMode": "none",
+          "justifyMode": "center",
+          "orientation": "auto",
+          "percentChangeColorMode": "standard",
+          "reduceOptions": {
+            "calcs": [
+              "lastNotNull"
+            ],
+            "fields": "",
+            "values": false
+          },
+          "showPercentChange": false,
+          "textMode": "auto",
+          "wideLayout": true
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "dataset": "aspenhealthcare_DB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "SELECT countExecuting AS \"Running Jobs\", countPending AS \"Pending Jobs\", countStopping AS \"Stopping Jobs\", countTerminating AS \"Terminating Jobs\", countSuspended AS \"Suspended Jobs\", countResumed AS \"Resumed Jobs\", date_queried AS \"Date\" FROM ${tenant}_DB.triggered_job_states ",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "alias": "\"Running Jobs\"",
+                  "parameters": [
+                    {
+                      "name": "countExecuting",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Pending Jobs\"",
+                  "parameters": [
+                    {
+                      "name": "countPending",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Stopping Jobs\"",
+                  "parameters": [
+                    {
+                      "name": "countStopping",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Terminating Jobs\"",
+                  "parameters": [
+                    {
+                      "name": "countTerminating",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Suspended Jobs\"",
+                  "parameters": [
+                    {
+                      "name": "countSuspended",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Resumed Jobs\"",
+                  "parameters": [
+                    {
+                      "name": "countResumed",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Date\"",
+                  "parameters": [
+                    {
+                      "name": "date_queried",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "triggered_job_states"
+          }
+        ],
+        "title": "Triggered Jobs States",
+        "transformations": [
+          {
+            "id": "convertFieldType",
+            "options": {
+              "conversions": [
+                {
+                  "destinationType": "time",
+                  "targetField": "Date"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Running Jobs"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Pending Jobs"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Stopping Jobs"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Terminating Jobs"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Suspended Jobs"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Resumed Jobs"
+                }
+              ],
+              "fields": {}
+            }
+          }
+        ],
+        "type": "stat"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "description": "Allows you to see running jobs in the selected interval broken down into specific timeframes. Starting a new job results in a job number increase for the past hour. Please note that jobs started within schedules are taken into account as well.",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "barWidthFactor": 0.5,
+              "drawStyle": "bars",
+              "fillOpacity": 100,
+              "gradientMode": "hue",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineWidth": 3,
+              "pointSize": 12,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": []
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 7,
+          "x": 8,
+          "y": 6
+        },
+        "id": 2,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "right",
+            "showLegend": false
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "dataset": "aspenhealthcare_DB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "SELECT countExecuting AS \"Executed\", pointInTime AS \"Date\" FROM ${tenant}_DB.completed_jobs_timeframe  ",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "alias": "\"Executed\"",
+                  "parameters": [
+                    {
+                      "name": "countExecuting",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Date\"",
+                  "parameters": [
+                    {
+                      "name": "pointInTime",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "completed_jobs_timeframe"
+          }
+        ],
+        "title": "Running Jobs Timeframe",
+        "transformations": [
+          {
+            "id": "convertFieldType",
+            "options": {
+              "conversions": [
+                {
+                  "destinationType": "time",
+                  "targetField": "Date"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Executed"
+                }
+              ],
+              "fields": {}
+            }
+          }
+        ],
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "description": "Allows you to see the jobs timeline in the selected interval broken down according to their final state. It enables you to have an overview of the number of jobs finished or stopped. Stopping a job causes the corresponding information here to update accordingly. As long as a job is not yet finished, it is not taken into account in this widget.",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": true,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "barAlignment": 0,
+              "barWidthFactor": 0.6,
+              "drawStyle": "line",
+              "fillOpacity": 8,
+              "gradientMode": "opacity",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "insertNulls": false,
+              "lineInterpolation": "linear",
+              "lineStyle": {
+                "fill": "solid"
+              },
+              "lineWidth": 3,
+              "pointSize": 8,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "showPoints": "auto",
+              "spanNulls": false,
+              "stacking": {
+                "group": "A",
+                "mode": "none"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Faulted"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "dark-red",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Stopped"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "orange",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 7,
+          "x": 16,
+          "y": 6
+        },
+        "id": 3,
+        "options": {
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "bottom",
+            "showLegend": true
+          },
+          "timezone": [
+            "utc"
+          ],
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "dataset": "aspenhealthcare_DB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "SELECT countSuccessful AS \"Successful\", countErrors AS \"Faulted\", countStopped AS \"Stopped\", pointInTime AS \"Date\" FROM ${tenant}_DB.completed_jobs_timeline ",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "alias": "\"Successful\"",
+                  "parameters": [
+                    {
+                      "name": "countSuccessful",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Faulted\"",
+                  "parameters": [
+                    {
+                      "name": "countErrors",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Stopped\"",
+                  "parameters": [
+                    {
+                      "name": "countStopped",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Date\"",
+                  "parameters": [
+                    {
+                      "name": "pointInTime",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "completed_jobs_timeline"
+          }
+        ],
+        "title": "Completed Jobs Timeline",
+        "transformations": [
+          {
+            "id": "convertFieldType",
+            "options": {
+              "conversions": [
+                {
+                  "destinationType": "time",
+                  "targetField": "Date"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Successful"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Faulted"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Stopped"
+                }
+              ],
+              "fields": {}
+            }
+          }
+        ],
+        "type": "timeseries"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 16
+        },
+        "id": 9,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<hr style=\"border: 1px solid #FFFFFF; margin: 0px 0;\">\r\n",
+          "mode": "markdown"
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "dataset": "HealthDB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "builder",
+            "format": "table",
+            "rawSql": "",
+            "refId": "A"
+          }
+        ],
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "description": "Allows you to see precise figures of the final job states. Enables you to see if there are many jobs that are either faulted or stopped and implicitly make sure that the system is healthy. Starting or stopping a job causes the corresponding information from this widget to update accordingly. As long as a job is not yet finished, it is not taken into account in this widget.",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              }
+            },
+            "mappings": []
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Stopped"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "light-orange",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Faulted"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "dark-red",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            },
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Successful"
+              },
+              "properties": [
+                {
+                  "id": "color",
+                  "value": {
+                    "fixedColor": "light-green",
+                    "mode": "fixed"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 9,
+          "x": 0,
+          "y": 17
+        },
+        "id": 4,
+        "options": {
+          "displayLabels": [],
+          "legend": {
+            "displayMode": "list",
+            "placement": "right",
+            "showLegend": true,
+            "values": []
+          },
+          "pieType": "donut",
+          "reduceOptions": {
+            "calcs": [],
+            "fields": "",
+            "values": false
+          },
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          }
+        },
+        "targets": [
+          {
+            "dataset": "aspenhealthcare_DB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "SELECT countSuccessful AS \"Successful\", countErrors AS \"Faulted\", countStopped AS \"Stopped\", date_queried AS \"Date\" FROM ${tenant}_DB.completed_jobs_overview ",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "alias": "\"Successful\"",
+                  "parameters": [
+                    {
+                      "name": "countSuccessful",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Faulted\"",
+                  "parameters": [
+                    {
+                      "name": "countErrors",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Stopped\"",
+                  "parameters": [
+                    {
+                      "name": "countStopped",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Date\"",
+                  "parameters": [
+                    {
+                      "name": "date_queried",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "completed_jobs_overview"
+          }
+        ],
+        "title": "Completed Jobs Overview",
+        "transformations": [
+          {
+            "id": "convertFieldType",
+            "options": {
+              "conversions": [
+                {
+                  "destinationType": "time",
+                  "targetField": "Date"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Successful"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Faulted"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Stopped"
+                }
+              ],
+              "fields": {}
+            }
+          }
+        ],
+        "type": "piechart"
+      },
+      {
+        "datasource": {
+          "default": true,
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "description": "Displays the average pending time for each individual process.",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "palette-classic"
+            },
+            "custom": {
+              "axisBorderShow": false,
+              "axisCenteredZero": false,
+              "axisColorMode": "text",
+              "axisLabel": "",
+              "axisPlacement": "auto",
+              "fillOpacity": 80,
+              "gradientMode": "opacity",
+              "hideFrom": {
+                "legend": false,
+                "tooltip": false,
+                "viz": false
+              },
+              "lineWidth": 1,
+              "scaleDistribution": {
+                "type": "linear"
+              },
+              "thresholdsStyle": {
+                "mode": "off"
+              }
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green",
+                  "value": null
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            },
+            "unit": "short"
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byType",
+                "options": "string"
+              },
+              "properties": [
+                {
+                  "id": "custom.axisPlacement",
+                  "value": "hidden"
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 8,
+          "w": 14,
+          "x": 10,
+          "y": 17
+        },
+        "id": 11,
+        "options": {
+          "barRadius": 0,
+          "barWidth": 0.97,
+          "fullHighlight": true,
+          "groupWidth": 0.7,
+          "legend": {
+            "calcs": [],
+            "displayMode": "list",
+            "placement": "right",
+            "showLegend": true
+          },
+          "orientation": "auto",
+          "showValue": "auto",
+          "stacking": "none",
+          "tooltip": {
+            "mode": "single",
+            "sort": "none"
+          },
+          "xTickLabelRotation": 0,
+          "xTickLabelSpacing": 300
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "dataset": "aspenhealthcare_DB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "SELECT averagePendingTimeInSeconds AS \"Avg.Pending Time\", processName AS \"Process\", date_queried AS \"Date\" FROM ${tenant}_DB.process_details_table ",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "alias": "\"Avg.Pending Time\"",
+                  "parameters": [
+                    {
+                      "name": "averagePendingTimeInSeconds",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Process\"",
+                  "parameters": [
+                    {
+                      "name": "processName",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Date\"",
+                  "parameters": [
+                    {
+                      "name": "date_queried",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "process_details_table"
+          }
+        ],
+        "title": "Average Pending Time (seconds)",
+        "transformations": [
+          {
+            "id": "convertFieldType",
+            "options": {
+              "conversions": [
+                {
+                  "destinationType": "number",
+                  "targetField": "Avg.Pending Time"
+                },
+                {
+                  "destinationType": "time",
+                  "targetField": "Date"
+                },
+                {
+                  "destinationType": "string",
+                  "targetField": "Process"
+                }
+              ],
+              "fields": {}
+            }
+          }
+        ],
+        "type": "barchart"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "gridPos": {
+          "h": 1,
+          "w": 24,
+          "x": 0,
+          "y": 25
+        },
+        "id": 12,
+        "options": {
+          "code": {
+            "language": "plaintext",
+            "showLineNumbers": false,
+            "showMiniMap": false
+          },
+          "content": "<hr style=\"border: 1px solid #FFFFFF; margin: 0px 0;\">\r\n",
+          "mode": "markdown"
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "dataset": "HealthDB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "builder",
+            "format": "table",
+            "rawSql": "",
+            "refId": "A"
+          }
+        ],
+        "transparent": true,
+        "type": "text"
+      },
+      {
+        "datasource": {
+          "type": "mysql",
+          "uid": "adygmwjegvk74d"
+        },
+        "description": "Allows you to see information pertaining to each process and the corresponding jobs metrics. If a Robot starts executing a new job, the corresponding information updates accordingly. The total number of processes is displayed in parentheses after the widget name.",
+        "fieldConfig": {
+          "defaults": {
+            "color": {
+              "mode": "thresholds"
+            },
+            "custom": {
+              "align": "left",
+              "cellOptions": {
+                "type": "auto"
+              },
+              "filterable": true,
+              "inspect": false
+            },
+            "mappings": [],
+            "thresholds": {
+              "mode": "absolute",
+              "steps": [
+                {
+                  "color": "green"
+                },
+                {
+                  "color": "red",
+                  "value": 80
+                }
+              ]
+            }
+          },
+          "overrides": [
+            {
+              "matcher": {
+                "id": "byName",
+                "options": "Process"
+              },
+              "properties": [
+                {
+                  "id": "custom.width",
+                  "value": 158
+                }
+              ]
+            }
+          ]
+        },
+        "gridPos": {
+          "h": 10,
+          "w": 24,
+          "x": 0,
+          "y": 26
+        },
+        "id": 10,
+        "options": {
+          "cellHeight": "sm",
+          "footer": {
+            "countRows": false,
+            "enablePagination": true,
+            "fields": "",
+            "reducer": [
+              "sum"
+            ],
+            "show": false
+          },
+          "showHeader": true,
+          "sortBy": []
+        },
+        "pluginVersion": "11.2.0",
+        "targets": [
+          {
+            "dataset": "aspenhealthcare_DB",
+            "datasource": {
+              "type": "mysql",
+              "uid": "adygmwjegvk74d"
+            },
+            "editorMode": "code",
+            "format": "table",
+            "rawQuery": true,
+            "rawSql": "SELECT processName AS \"Process\", countExecuting AS \"Running\", countPending AS \"Pending\", countSuspended AS \"Suspended\", countResumed AS \"Resumed\", countSuccessful AS \"Successful\", countStopped AS \"Stopped\", countErrors AS \"Faulted\", averageDurationInSeconds AS \"Avg.Duration\", averagePendingTimeInSeconds AS \"Avg.Pending Time\", date_queried AS \"Date\" FROM ${tenant}_DB.process_details_table ",
+            "refId": "A",
+            "sql": {
+              "columns": [
+                {
+                  "alias": "\"Process\"",
+                  "parameters": [
+                    {
+                      "name": "processName",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Running\"",
+                  "parameters": [
+                    {
+                      "name": "countExecuting",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Pending\"",
+                  "parameters": [
+                    {
+                      "name": "countPending",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Suspended\"",
+                  "parameters": [
+                    {
+                      "name": "countSuspended",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Resumed\"",
+                  "parameters": [
+                    {
+                      "name": "countResumed",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Successful\"",
+                  "parameters": [
+                    {
+                      "name": "countSuccessful",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Stopped\"",
+                  "parameters": [
+                    {
+                      "name": "countStopped",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Faulted\"",
+                  "parameters": [
+                    {
+                      "name": "countErrors",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Avg.Duration\"",
+                  "parameters": [
+                    {
+                      "name": "averageDurationInSeconds",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Avg.Pending Time\"",
+                  "parameters": [
+                    {
+                      "name": "averagePendingTimeInSeconds",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                },
+                {
+                  "alias": "\"Date\"",
+                  "parameters": [
+                    {
+                      "name": "date_queried",
+                      "type": "functionParameter"
+                    }
+                  ],
+                  "type": "function"
+                }
+              ],
+              "groupBy": [
+                {
+                  "property": {
+                    "type": "string"
+                  },
+                  "type": "groupBy"
+                }
+              ],
+              "limit": 50
+            },
+            "table": "process_details_table"
+          }
+        ],
+        "title": "Processes Details",
+        "transformations": [
+          {
+            "id": "convertFieldType",
+            "options": {
+              "conversions": [
+                {
+                  "destinationType": "time",
+                  "targetField": "Date"
+                },
+                {
+                  "destinationType": "string",
+                  "targetField": "Process"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Running"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Pending"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Suspended"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Resumed"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Successful"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Stopped"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Faulted"
+                },
+                {
+                  "destinationType": "number",
+                  "targetField": "Avg.Duration"
+                }
+              ],
+              "fields": {}
+            }
+          }
+        ],
+        "type": "table"
+      }
+    ],
+    "schemaVersion": 39,
+    "tags": [],
+    "templating": {
+      "list": [
+        {
+          "current": {
+            "selected": false,
+            "text": "aspenhealthcare",
+            "value": "aspenhealthcare"
+          },
+          "hide": 0,
+          "includeAll": false,
+          "label": "TENANT",
+          "multi": false,
+          "name": "tenant",
+          "options": [
+            {
+              "selected": true,
+              "text": "aspenhealthcare",
+              "value": "aspenhealthcare"
+            },
+            {
+              "selected": false,
+              "text": "italtile",
+              "value": "italtile"
+            },
+            {
+              "selected": false,
+              "text": "afgriprod",
+              "value": "afgriprod"
+            },
+            {
+              "selected": false,
+              "text": "tangentsolutionsproduction",
+              "value": "tangentsolutionsproduction"
+            },
+            {
+              "selected": false,
+              "text": "intellicomms",
+              "value": "intellicomms"
+            }
+          ],
+          "query": "aspenhealthcare,italtile,afgriprod,tangentsolutionsproduction,intellicomms",
+          "queryValue": "",
+          "skipUrlSync": false,
+          "type": "custom"
+        }
+      ]
+    },
+    "time": {
+      "from": "2024-09-09T14:00:00.000Z",
+      "to": "2024-09-11T08:03:14.937Z"
+    },
+    "timepicker": {},
+    "timezone": "browser",
+    "title": "Processes",
+    "uid": "ddxhidluemm80e",
+    "version": 40,
+    "weekStart": ""
+  }
