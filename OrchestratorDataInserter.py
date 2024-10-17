@@ -25,17 +25,10 @@ class OrchestratorDataInserter:
                 # Check if the schema already exists
                 cursor.execute(f"CREATE DATABASE IF NOT EXISTS `{self.db_name}`;")
                 print(f"Schema '{self.db_name}' has been created or already exists.")
-                # and for the global table too, why not
-                cursor.execute(f"CREATE DATABASE IF NOT EXISTS `global`;")
-                print(f"Schema 'global' has been created or already exists.")
         except pymysql.MySQLError as e:
             print(f"Error creating schema: {e}")
         finally:
             connection.close()
-
-        
-        
-
 
     def insert_queue_processing_records(self):
         try:
@@ -225,7 +218,7 @@ class OrchestratorDataInserter:
                 self.db_user,
                 self.db_pass,
                 self.db_host,
-                "global",
+                self.db_name,
                 trunc=True)
             
         except Exception as e:
@@ -244,7 +237,7 @@ class OrchestratorDataInserter:
                             self.db_user,
                             self.db_pass,
                             self.db_host,
-                            "global",
+                            self.db_name,
                             trunc=True)  # Optional: set trunc=True if you want to truncate the table before insert
             
         except Exception as e:
@@ -261,8 +254,8 @@ class OrchestratorDataInserter:
                     self.db_user,
                     self.db_pass,
                     self.db_host,
-                    "global",
-                    trunc=True)
+                    self.db_name,
+                    trunc=False)
             
         except Exception as e:
             print(f"An error occured in insert_faulted_jobs() : {str(e)}")
