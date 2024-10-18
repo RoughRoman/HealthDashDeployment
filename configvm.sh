@@ -26,6 +26,7 @@ echo "Running MySQL Docker container..."
 sudo docker run -d --name mysql-container \
   -e MYSQL_ROOT_PASSWORD=<your-password> \
   -e MYSQL_DATABASE=<database-name> \
+  -v /my/own/datadir:/var/lib/mysql \
   -p 3306:3306 mysql:latest
 
 # Run Grafana container
